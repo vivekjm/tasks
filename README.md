@@ -1,22 +1,23 @@
-# Welcome to your new ignited app!
+# React Native Posts App
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
+This project is a React Native application designed to fetch and display posts from a public API. It demonstrates the use of hooks like `useEffect`, `useState`, `useCallback`, and concepts like memoization and optimization for heavy computational tasks. The app includes functionality such as displaying a list of posts, performing heavy computations for each post item, and fetching detailed post information upon user interaction.
 
-## The latest and greatest boilerplate for Infinite Red opinions
+## Features
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+- Fetch and display a list of posts from a public API.
+- Optimize heavy computations for each post item using `useMemo`.
+- Navigate to a detailed view of a post.
+- Pull-to-refresh functionality on the posts list.
+- Skeleton loaders for a better loading experience.
+- Use of `useCallback` to memoize callback functions and prevent unnecessary re-renders.
 
-Currently includes:
+## Setup and Run
 
-- React Native
-- React Navigation
-- MobX State Tree
-- TypeScript
-- And more!
+To run this project, you need to have Node.js and React Native environment set up on your machine. Follow the steps below to get the project up and running:
 
-## Quick Start
+1. **Clone the Repository**
 
-The Ignite boilerplate project's structure will look similar to this:
+
 
 ```
 ignite-project
@@ -145,20 +146,3 @@ const MyComponent = () => {
 };
 ```
 
-### ./ignite directory
-
-The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find templates you can customize to help you get started with React Native.
-
-### ./test directory
-
-This directory will hold your Jest configs and mocks.
-
-## Running Maestro end-to-end tests
-
-Follow our [Maestro Setup](https://ignitecookbook.com/docs/recipes/MaestroSetup) recipe from the [Ignite Cookbook](https://ignitecookbook.com/)!
-
-## Previous Boilerplates
-
-- [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
