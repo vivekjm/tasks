@@ -3,13 +3,18 @@
 This project is a React Native application designed to fetch and display posts from a public API. It demonstrates the use of hooks like `useEffect`, `useState`, `useCallback`, and concepts like memoization and optimization for heavy computational tasks. The app includes functionality such as displaying a list of posts, performing heavy computations for each post item, and fetching detailed post information upon user interaction.
 
 ## Features
+- Fetch data from a public API and display it in a list format.
+- Optimize heavy computation using `useMemo` hook.
+- Navigate to item details screen on item click.
+- Display item details including `ID`, `Title`, and `Body`.
+- Memoize callback function using `useCallback` hook to prevent unnecessary re-renders.
 
-- Fetch and display a list of posts from a public API.
-- Optimize heavy computations for each post item using `useMemo`.
-- Navigate to a detailed view of a post.
-- Pull-to-refresh functionality on the posts list.
-- Skeleton loaders for a better loading experience.
-- Use of `useCallback` to memoize callback functions and prevent unnecessary re-renders.
+## Performance Optimization
+### Memoization
+Memoization is a technique used to optimize performance by caching the results of expensive computations. In this project, memoization is achieved using the `useMemo` hook. The `computeDetails` function, which performs heavy computation on each item, is memoized using `useMemo`. This ensures that the result of the computation is cached and only recalculated when the dependencies change. By memoizing the heavy computation, unnecessary re-computation is avoided, leading to improved performance and responsiveness of the application.
+
+### `computeDetails` Function
+The `computeDetails` function takes an item's data as input and returns computed details, such as complex calculations or transformations. In this project, the `computeDetails` function concatenates the title of the item with the word "processed" and logs the time taken for the computation. This function is memoized using the `useMemo` hook to optimize performance by preventing unnecessary re-computation. By memoizing the `computeDetails` function, the application avoids redundant computations, resulting in faster rendering and improved user experience.
 
 ## Setup and Run
 
