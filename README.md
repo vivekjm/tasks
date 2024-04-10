@@ -8,9 +8,14 @@ This project is a React Native application designed to fetch and display posts f
 - Navigate to item details screen on item click.
 - Display item details including `ID`, `Title`, and `Body`.
 - Memoize callback function using `useCallback` hook to prevent unnecessary re-renders.
+  
 
 ## Performance Optimization
 ### Memoization
+
+https://github.com/vivekjm/tasks/assets/24496671/e87aa70f-10f6-4438-95f7-fdf2ef3b99fc
+
+
 Memoization is a technique used to optimize performance by caching the results of expensive computations. In this project, memoization is achieved using the `useMemo` hook. The `computeDetails` function, which performs heavy computation on each item, is memoized using `useMemo`. This ensures that the result of the computation is cached and only recalculated when the dependencies change. By memoizing the heavy computation, unnecessary re-computation is avoided, leading to improved performance and responsiveness of the application.
 
 ### `computeDetails` Function
